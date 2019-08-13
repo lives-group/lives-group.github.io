@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Prof. Rodrigo Ribeiro"
+title: "LiVES"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,13 +8,24 @@ redirect_from:
   - /about.html
 ---
 
-I am a lecturer in the Department of Computer Science at Universidade Federal de Ouro Preto (UFOP), Minas Gerais, Brazil.
 
-I graduated from Universidade Federal de Ouro Preto in 2005, and obtained my PhD at the Universidade Federal de Minas
-Gerais in 2013 under the supervision of Dr. [Carlos Camarão](http://homepages.dcc.ufmg.br/~camarao/).
+LiVES is the Programming Languages, Software Verification and Specification research group of 
+[Departament of Computer Science](www.decom.ufop.br) of
+[Federal University of Ouro Preto (UFOP)](www.ufop.br), MG, Brazil.
 
-During 2016-2017 I did a post-doc at Universidade Federal de Pelotas, under the supervision of André Rauber Du Bois.
+# Research themes
 
-# Research interests
+Our vision is to use mathematics to understand the **nature of computation**, and to turn that 
+understanding into the next generation of **programming languages** and software verification tools.
 
-My research interests lie broadly within the fields of programming languages design and implementation and software engineering. More specifically, I have a particular interest in building correct by construction software using type theory-based proof assistants.
+Throught the [Curry-Howard correspondence](https://en.wikipedia.org/wiki/Curry–Howard_correspondence) we 
+see mathematics and its foundations as an activity that has an essential programming nature. Our main 
+research tools to achieve better solutions to programming / mathematical problems are:
+
+* Functional Programming: Using modern programming languages like [Haskell](www.haskell.org), 
+[Agda](https://wiki.portal.chalmers.se/agda/) and [Coq](www.coq.inria.fr).
+
+* Logics: We use non-classical logics as a formal language to specify software requirements.
+
+* Type theory: We design type systems and its checking / inference algorithms as a tool for checking
+code and provide better programming abstractions.

@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Rodrigo Ribeiro"
+title                    : "LiVES"
 title_separator          : "-"
-name                     : &name "Rodrigo Ribeiro"
+name                     : &name "LiVES"
 description              : &description ""
-url                      : https://rodrigogribeiro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://lives.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "rodrigogribeiro/rodrigogribeiro.github.io"
+repository               : "lives/lives.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -78,12 +78,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "Rodrigo Ribeiro"
-  avatar           : "foto-barba.jpg"
-  bio              : "Lecturer at Computer Science Departament"
+  name             : "LiVES"
+  avatar           : "lives.png"
+  bio              : "Programming Languages, Software Verification and Specification research group"
   location         : "UFOP - Ouro Preto/MG - Brazil"
   employer         :
-  googlescholar    : "https://scholar.google.com.br/citations?user=BuPTdyIAAAAJ&hl=pt-BR"
+  googlescholar    : 
   email            :
   uri              :
   bitbucket        :
@@ -92,19 +92,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "rodrigogribeiro"
+  github           : "lives-group"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : 
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   steam            :
   tumblr           :
-  twitter          : "rodrigogeraldo"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
