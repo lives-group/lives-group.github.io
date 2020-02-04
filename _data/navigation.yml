@@ -9,8 +9,8 @@ main:
   - title: "Projects"
     url: /projects/
             
-  - title: "LiVES Blog"
+  - title: "Blog"
     url: /year-archive/
     
-  - title: "LIVES Talks"
+  - title: "LiVES Talks"
     url: /talks/
