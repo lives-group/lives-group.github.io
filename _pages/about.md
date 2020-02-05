@@ -10,8 +10,8 @@ redirect_from:
 
 
 LiVES is the Programming Languages, Software Verification and Specification research group of 
-[Departament of Computer Science](www.decom.ufop.br) of
-[Federal University of Ouro Preto (UFOP)](www.ufop.br), MG, Brazil.
+[Departament of Computer Science](http://www.decom.ufop.br) of
+[Federal University of Ouro Preto (UFOP)](https://www.ufop.br), MG, Brazil.
 
 # Research themes
 
@@ -24,8 +24,8 @@ see mathematics and its foundations as an activity that has an essential program
 the light of [computational trinitarianism](https://ncatlab.org/nlab/show/computational+trinitarianism), 
 our main research tools to achieve better solutions to programming / mathematical problems are:
 
-* Functional Programming: Using modern programming languages like [Haskell](www.haskell.org), 
-[Agda](https://wiki.portal.chalmers.se/agda/) and [Coq](www.coq.inria.fr).
+* Functional Programming: Using modern programming languages like [Haskell](https://www.haskell.org/), 
+[Agda](https://wiki.portal.chalmers.se/agda/) and [Coq](https://coq.inria.fr/).
 
 * Logics: We use non-classical logics as a formal language to specify software requirements.
 
