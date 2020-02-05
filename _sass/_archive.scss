@@ -46,6 +46,19 @@
   a + a {
     opacity: 0.5;
   }
+   
+   a {
+      text-decoration: none;
+      color: #494e52;
+      border-bottom: #00d463 solid 2px;
+      
+      &:hover {
+         text-decoration: none;
+         color: #494e52;
+         border-bottom: #00d463 solid 2px;
+      }
+   }
+   
 }
 
 /* remove border*/
@@ -242,4 +255,16 @@
       }
     }
   }
+}
+
+.archive__item u {
+   color: inherit !important;
+   text-decoration: none !important;
+   boder-bottom: #004d63 solid 2px !important;
+   
+   &:hover {
+      color: inherit;
+      text-decoration: none;
+      boder-bottom: #004d63 solid 2px;
+   }
 }
