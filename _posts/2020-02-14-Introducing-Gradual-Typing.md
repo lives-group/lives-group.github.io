@@ -8,8 +8,6 @@ tags:
   - programming languages
 ---
 
-# Introducing Gradual Typing
-
 If you got interested in gradually typed systems, but don't know where to start reading, this post is just for you. Only basic programming knowledge is assumed.
 
 ## Playing with Types
