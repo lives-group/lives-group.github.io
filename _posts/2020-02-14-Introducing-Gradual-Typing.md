@@ -1,3 +1,13 @@
+---
+title: 'Introducing Gradual Typing'
+date: 2020-02-14
+permalink: /posts/2020/02/Introducing-Gradual-Typing/
+tags:
+  - gradual typing
+  - type theory
+  - programming languages
+---
+
 # Introducing Gradual Typing
 
 If you got interested in gradually typed systems, but don't know where to start reading, this post is just for you. Only basic programming knowledge is assumed.
