@@ -111,6 +111,7 @@ header .wrapper {
 
 .post-link:hover {
   background-color: #00d463;
+  color: black;
 }
 
 h1, h2, h3 {
@@ -193,6 +194,10 @@ a:hover {
 .post-content ul, .post-content ol {
   padding-left: 30px;
   padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.post-content p {
   padding-bottom: 15px;
 }
 
