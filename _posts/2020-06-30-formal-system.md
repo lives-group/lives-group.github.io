@@ -2,7 +2,7 @@
 layout: post
 title: "Natural Deduction as a Dependent type"
 author: Felipe Péret
-date: 2020-06-30
+date: 2020-06-30 17:00 -0300
 
 categories:
 - proof theory
