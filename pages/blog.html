@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Blog"
+permalink: /blog/
+author_profile: true
+order: 5
+---
+
+<h1>Blog Posts</h1>
+
+{%- if site.posts.size > 0 -%}
+<ul class="post-list">
+    {%- for post in site.posts -%}
+    <li>
+        <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+        </h2>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+     <div class="meta-items"> <span class="post-meta">Written by {{ post.author }}</span><span class="post-meta"> in {{ post.date | date: date_format }}</span></div>
+      {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+</ul>
+{%- endif -%}

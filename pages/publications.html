@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Papers"
+permalink: /papers/
+author_profile: true
+order: 3
+---
+
+<h1>Papers</h1>
+
+{%- if site.papers.size > 0 -%}
+<ul class="papers-list">
+    {%- for paper in site.papers reversed -%}
+    <li>
+        <h2>
+            {{ paper.title }}
+        </h2>
+     <div class="meta-items"> <span class="post-meta">{{ paper.venue }}</span></div>
+      {{paper.content}}
+    </li>
+    {%- endfor -%}
+</ul>
+{%- endif -%}

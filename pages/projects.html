@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Projects"
+permalink: /projects/
+author_profile: true
+order: 4
+---
+
+<h1>Projects</h1>
+
+{%- if site.projects.size > 0 -%}
+<ul class="papers-list">
+    {%- for paper in site.projects -%}
+    <li>
+        <h2>
+            {{ paper.title }}
+        </h2>
+      {{paper.content}}
+    </li>
+    {%- endfor -%}
+</ul>
+{%- endif -%}

@@ -1,0 +1,25 @@
+<header class="" role="banner">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | sort:"order" | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+
+    {%- if page_paths -%}
+      <nav class="site-nav">
+        <div class='logo'><img class="mush left" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="Green Mushroom from Super Mario at left"><img class="mush middle" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="green mushroom from Super Mario at middle"><img class="mush right" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="green mushroom from Super Mario at right"></div>
+          <div class="menu-links">
+            {%- for path in page_paths | sort:"order" -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+              {%- if page.url == my_page.url -%}
+                <a class="page-link active" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              {%- else -%}
+                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav>
+    {%- endif -%}
+  </div>
+</header>

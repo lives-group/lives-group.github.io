@@ -1,0 +1,50 @@
+---
+layout: default
+title: "People"
+permalink: /people/
+author_profile: true
+order: 2
+---
+
+<h1>People</h1>
+<h2>Researchers</h2>
+{%- assign researchers = site.people | where:"category", "Researcher" | sort:"priority" -%}
+<ul class="people-list">
+{%- for person in researchers -%}
+    <li>
+        <span>{%- if person.degree -%}{{person.degree | append:" "}} {%- endif -%}{{person.name}}</span>
+        <span class="resume-link"><img src="../assets/icons/link.svg"/><a href="{{person.lattes}}">Resumé</a></span>
+    </li>
+{%- endfor -%}
+</ul>
+<h2>PhD Students</h2>
+{%- assign phdstudents = site.people | where:"category", "phdstudent" | sort:"priority" -%}
+<ul class="people-list">
+{%- for person in phdstudents -%}
+    <li>
+        <span>{%- if person.degree -%}{{person.degree | append:" "}} {%- endif -%}{{person.name}}</span>
+        <span class="resume-link"><img src="../assets/icons/link.svg"/><a href="{{person.lattes}}">Resumé</a></span>
+    </li>
+{%- endfor -%}
+</ul>
+<h2>MSc Students</h2>
+{%- assign mscstudents = site.people | where:"category", "mscstudent" | sort:"priority" -%}
+<ul class="people-list">
+{%- for person in mscstudents -%}
+    <li>
+        <span>{%- if person.degree -%}{{person.degree | append:" "}} {%- endif -%}{{person.name}}</span>
+        <span class="resume-link"><img src="../assets/icons/link.svg"/><a href="{{person.lattes}}">Resumé</a></span>
+    </li>
+{%- endfor -%}
+</ul>
+<h2>Undergraduates</h2>
+{%- assign undergrads = site.people | where:"category", "undergrad" | sort:"priority" -%}
+<ul class="people-list">
+{%- for person in undergrads -%}
+    <li>
+        <span>{%- if person.degree -%}{{person.degree | append:" "}} {%- endif -%}{{person.name}}</span>
+        <span class="resume-link"><img src="../assets/icons/link.svg"/><a href="{{person.lattes}}">Resumé</a></span>
+    </li>
+{%- endfor -%}
+</ul>
+</ul>
