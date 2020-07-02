@@ -2,6 +2,7 @@
 layout: post
 title: 'Introducing Gradual Typing'
 date: 2020-02-14 15:00:00 -0300
+permalink: /blog/introducing-gradual-typing
 author: Maycon Amaro
 categories:
   - type theory

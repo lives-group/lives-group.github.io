@@ -3,6 +3,7 @@ layout: post
 title: "Natural Deduction as a Dependent type"
 author: Felipe Péret
 date: 2020-06-30 17:00 -0300
+permalink: /blog/natural-deduction-as-a-dependet-type
 
 categories:
 - proof theory
@@ -99,3 +100,5 @@ One way to prove consistency for Natural Deduction is by translating it to anoth
 This formal system, with the addition of another rule called "contraction", is equivalent to the original natural deduction system, and equivalent to the Sequent Calculus with the cut rule, a formal system whose consistency is trivial.
 
 We'll publish both Sequent Calculus and Bi-directional Natural Deduction formalizations, and the final result formalizing the consistency proof for Natural Deduction.
+
+Next post : [Sequent Calculus as a Dependent Type](/blog/sequent-calculus-as-a-dependent-type)
