@@ -3,7 +3,7 @@ layout: post
 title: 'General Recursion in Agda --- Part I'
 date: 2020-07-08 15:00:00 -0300
 permalink: /blog/general-recursion-part-I
-author: Maycon Amaro
+author: Rodrigo Ribeiro
 categories:
   - type theory
 ---
