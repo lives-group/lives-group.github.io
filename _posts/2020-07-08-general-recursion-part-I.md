@@ -12,14 +12,15 @@ categories:
 
 A very annoying issue that one faces when learning type theory based proof assistants like Coq
 or Agda is  that all functions must be *total*, i.e., the pattern matching must be exaustive 
-and it should always terminate. These languages use *totality checker* to ensure these 
-restrictions in all programs. However, since the undecidability of the halting problem, there 
+and it should always terminate. These languages use a *totality checker* to ensure these 
+restrictions in all programs. However, due to the undecidability of the halting problem, there 
 is no algorithm capable of deciding the totality of functions. So, there are terminating functions
-which are not recognized as that by totality checkers. 
+which are not recognized as such by the totality checkers. 
 
-You are probably asking: "why should we worry about termination?". We should not allow looping 
+You are probably asking: "why should we worry about termination?". Basically, we should not 
+allow looping 
 functions since they can be used to derive contradictions. So, in order to ensure the logical 
-consistency of type theory, all functions should terminate in a finite number of steps. 
+consistency of Agda as a logic, all functions should terminate in a finite number of steps. 
 
 We will ilustrate the problem using Agda code. First, let's consider that is possible to define 
 the following function:
@@ -38,8 +39,8 @@ all-breaks-loose =  ⊥-elim (hell 0)
 ```
 
 Thus, to ensure the uselfulness of our type theory, we must insist that all functions are total. 
-This post will be the first of a series of posts about techniques to define functions which 
-terminate but are not recognized as such by the termination checker.
+This post will be the first of a series about techniques to define functions which 
+terminate but are not recognized as such by the termination checkers.
 
 The exemple we use to explain all techniques is merging two lists, a routine used by the 
 merge-sort algorithm. The traditional version (in Haskell) of this algorithm is as follows:
@@ -53,12 +54,14 @@ merge (x : xs) (y : ys)
    | otherwise = y : merge (x : xs) ys
 ```
 
+In the next section, we will describe how to implement it using bounded recursion.
+
 ## Bounded recursion
 
-The first technique to ensure termination of programs is to bound the number of allowed 
-recursive calls. We can limit the number of recursive calls by adding an extra parameter 
+A simple technique to ensure termination of recursive programs is to bound the number of allowed 
+recursive calls. We can limit the number of calls by adding an extra parameter 
 to the functions definition which denotes that limit. Next, we show an implementation of 
-`merge` algorithm using this technique.
+`merge` algorithm using bounded recursion.
 
 ```haskell
 merge-bounded : ℕ → List ℕ → List ℕ → Maybe (List ℕ)
@@ -77,17 +80,18 @@ allowed value provided as first argument. Also, we use the monadic behavior of c
 the `Maybe` type to avoid excessive pattern-matchings which are hidden within the monadic _bind_ 
 function.
 
-Despite its simple definition, the use of bounded recursion has some drawbacks: 
+While having a simple definition, the use of bounded recursion has some drawbacks: 
 1) It is not always easy to determine how much “fuel” is needed to calculate the 
-complete result of a function. For the merge example, just enter the value 
-`1 + length xs + length ys as input, since this function performs a number 
+complete result of a function. For the merge example, we can provide
+`1 + length xs + length ys` as input, since this function performs a number 
 of steps proportional to the size of the two lists. 2) Another drawback is 
 that the fuel parameter is preserved during compilation, which can impact on 
 code performance.
 
-While the performance issue doesn't have a simple solution, the first can be. 
-We can easily prove that `1 + length xs + length ys` is suffient to guarantee that 
-the result is always of the form `just zs` for some list `zs`. 
+While the performance issue doesn't have a simple solution (it depends on how the Agda's compiler
+pipeline is implemented), we can provide a guarantee of what is the mininum number of steps 
+demanded by `merge-bound` to return a `just` value. The next theorem shows that any value greater
+or equal to `1 + length xs + length ys` is sufficient. 
 
 ```haskell
 merge-enough : ∀ m (xs ys : List ℕ) →
