@@ -97,14 +97,14 @@ or equal to `1 + length xs + length ys` is sufficient.
 merge-enough : ∀ m (xs ys : List ℕ) →
                  m ≥ (1 + length (xs ++ ys)) →
                  ∃ (λ zs → merge-bounded m xs ys ≡ just zs)
-  merge-enough (suc m) [] ys gt = ys , refl
-  merge-enough (suc m) (x ∷ xs) [] gt = x ∷ xs , refl
-  merge-enough (suc m) (x ∷ xs) (y ∷ ys) gt with x <? y
-  ...| yes p with merge-enough m xs (y ∷ ys) (≥-inv gt)
-  ...   | zs , eq  rewrite eq = x ∷ zs , refl
-  merge-enough (suc m) (x ∷ xs) (y ∷ ys) gt | no  p 
-     with merge-enough m (x ∷ xs) ys (lemma {m}{y}{xs}{ys} gt)
-  ...| zs , eq rewrite eq = y ∷ zs , refl
+merge-enough (suc m) [] ys gt = ys , refl
+merge-enough (suc m) (x ∷ xs) [] gt = x ∷ xs , refl
+merge-enough (suc m) (x ∷ xs) (y ∷ ys) gt with x <? y
+...| yes p with merge-enough m xs (y ∷ ys) (≥-inv gt)
+...   | zs , eq  rewrite eq = x ∷ zs , refl
+merge-enough (suc m) (x ∷ xs) (y ∷ ys) gt | no  p 
+   with merge-enough m (x ∷ xs) ys (lemma {m}{y}{xs}{ys} gt)
+...| zs , eq rewrite eq = y ∷ zs , refl
 ```
 
 ## Conclusion
