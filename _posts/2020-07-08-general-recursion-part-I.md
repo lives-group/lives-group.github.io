@@ -107,6 +107,9 @@ merge-enough (suc m) (x ∷ xs) (y ∷ ys) gt | no  p
 ...| zs , eq rewrite eq = y ∷ zs , refl
 ```
 
+The previous definition uses some simple lemmas about ordering on natural numbers, which we 
+omit from the post for brevity. 
+
 ## Conclusion
 
 In this post, we dicussed why it is necessary to ensure totality for all Agda functions. We also
