@@ -21,8 +21,8 @@ if it is made on arguments strictly smaller, according to some appropriate notio
 
 The mathematical notion of smaller is formalized by the concept of _ordering relations_.
 A binary relation $$R$$ on a set $$A$$ is defined as a subset of the cartesian product 
-$$A \times A$$, i.e. \(R \subseteq A \times A\). It is worth mention, that in books in 
-mathematics uses the following way of representing the fact $$(x,y) \in R$$ as $xRy$. 
+$$A \times A$$, i.e. $$R \subseteq A \times A$$. It is worth mention, that in books in 
+mathematics uses the following way of representing the fact $$(x,y) \in R$$ as $$xRy$$. 
 We will follow the same notation in this post.
 
 Binary relations can have several properties of interest. We say that a relation is 
