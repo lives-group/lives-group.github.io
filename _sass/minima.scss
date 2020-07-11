@@ -69,8 +69,9 @@ header .wrapper {
   color: #454545;
 }
 
-.page-link:hover{
-  color: #00d463;
+.page-link:focus{
+  background-color: #00d463;
+  color: black;
 }
 
 .page-link.active, .page-link.active:hover {
@@ -111,7 +112,7 @@ header .wrapper {
   background-color: #266dd3;
 }
 
-.post-link:hover {
+.post-link:focus {
   background-color: #00d463;
   color: black;
 }
@@ -151,8 +152,10 @@ a, a:visited {
   color: #266dd3;
 }
 
-a:hover {
-  color: #00d463;
+a:focus {
+  background-color: #eee5e9;
+  color: black;
+  text-decoration: none;
 }
 
 .people-list {
@@ -401,24 +404,30 @@ pre.highlight {
 
 @media only screen and (max-width: 674px) {
   .site-nav{
-    flex-direction: column;
+    display: block;
     height: 200px;
-    position: unset;
-    padding-bottom: 40px;
+    position: static; //get rid of fixed
+  }
+
+  .site-nav.collapsed {
+    height: 430px;
+  }
+
+  .logo {
+    margin: auto;
+    width: 161px;
+    padding-bottom: 45px;
   }
 
   .menu-links {
-    width: 91.5%;
     min-width: 340px;
     flex-direction: column;
-    position: fixed;
     display: none;
-    background-color: #eee5e9;
+    position: static;
     padding-left: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
     height: 250px;
-    box-shadow: 0 0px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   }
 
   .menu-links a {
@@ -430,17 +439,18 @@ pre.highlight {
     border: none;
   }
 
-  .menu-links.responsive {
+  .menu-links.collapsed {
     display: flex;
   }
 
   .menu-container {
     width: 100%;
+    background-color: white;
+    border: 2px #454545 solid;
   }
 
   .hamburguer-btn {
-    background-color: #eee5e9;
-    display: unset;
+    display: static;
     width: 100%;
     height: 50px;
     text-transform: uppercase;
@@ -452,10 +462,7 @@ pre.highlight {
     font-size: 1.2em;
     display: flex;
     justify-content: space-between;
-  }
-
-  .hamburguer-btn.respons{
-    box-shadow: 0 0px 20px rgba(0,0,0,0.19), 0 0px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
   }
 
   footer p {

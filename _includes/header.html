@@ -5,8 +5,16 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
     {%- if page_paths -%}
-      <nav class="site-nav">
-        <div class='logo' aria-label="site logo"><img class="mush left" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="Green Mushroom from Super Mario at left"><img class="mush middle" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="green mushroom from Super Mario at middle"><img class="mush right" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="green mushroom from Super Mario at right"></div><div class="menu-container"><div class="hamburguer-btn" onclick="toggle()" id="hambbtn">Menu<img alt="three lines" src="/assets/icons/botao-de-menu.svg" class="menu-icon"/></div>
+      <nav class="site-nav" id="sitenav">
+        <div class='logo' aria-label="site logo">
+          <img class="mush left" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="Green Mushroom from Super Mario at left">
+          <img class="mush middle" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="green mushroom from Super Mario at middle">
+          <img class="mush right" src="{{site.baseurl}}/assets/icons/mushroom.svg" alt="green mushroom from Super Mario at right">
+        </div>
+        <div class="menu-container">
+          <div class="hamburguer-btn" onclick="toggle()" tabindex="0" onkeypress="toogle()" aria-label="expansible">
+            Menu<img alt="three horizontal lines" src="/assets/icons/botao-de-menu.svg" class="menu-icon"/>
+          </div>
           <div class="menu-links" id="menubar">
             {%- for path in page_paths | sort:"order" -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
@@ -18,7 +26,8 @@
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
-        </div></div>
+        </div>
+      </div>
       </nav>
     {%- endif -%}
   </div>

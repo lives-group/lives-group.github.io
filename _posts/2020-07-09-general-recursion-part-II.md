@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'General Recursion in Agda --- Part II'
+title: 'General Recursion in Agda — Part II'
 date: 2020-07-08 15:00:00 -0300
 permalink: /blog/general-recursion-part-II
 author: Rodrigo Ribeiro
