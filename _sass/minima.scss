@@ -381,6 +381,10 @@ pre.highlight {
     padding-bottom: 30px;
   }
 
+  div.highlighter-rouge, figure.highlight {
+    width: 90%;
+  }
+
   .menu-container{
     width: 100%
   }
@@ -489,6 +493,14 @@ pre.highlight {
   }
 
   .people-list > li {
+    width: 90%;
+  }
+
+  .heart {
+    height: 24px;
+  }
+
+  div.highlighter-rouge, figure.highlight {
     width: 90%;
   }
 }
