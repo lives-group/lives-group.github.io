@@ -4,7 +4,7 @@
 //var i;
 //for (i = 0; i < cog.length; i++) {
 //    cog[i].src="/assets/icons/mushroom-dark-mode.svg";
-}
+//}
 // end dark mode
 
 function toggle() {
