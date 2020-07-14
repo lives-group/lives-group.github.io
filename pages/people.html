@@ -47,4 +47,13 @@ order: 2
     </li>
 {%- endfor -%}
 </ul>
+<h2>Alumni</h2>
+{%- assign exalumni = site.people | where:"category", "alumni" | sort:"priority" -%}
+<ul class="people-list">
+{%- for person in exalumni -%}
+    <li>
+        <span>{%- if person.degree -%}{{person.degree | append:" "}} {%- endif -%}{{person.name}}</span>
+        <span class="resume-link"><img src="../assets/icons/link.svg" alt="A round blue ball with a white chain shape inside"/><a href="{{person.lattes}}">Resumé</a></span>
+    </li>
+{%- endfor -%}
 </ul>
