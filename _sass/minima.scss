@@ -10,14 +10,19 @@
   --font-color: black;
   --headings-color: black;
   --less-vibrant-font-color: #454545;
-  --first-heading-decoration: #f9654f;
-  --link-color: #266dd3;
+  --first-heading-decoration: #f9564f;
+  --link-color: #1C519B;
   --navbar-border-color: #eee5e9;
   --menu-link-border: #00d463;
-  --post-link-decoration: #fec601;
-  --selection-color: #fec601;
+  --post-link-decoration: #FEDF72;
+  --selection-color: #FEDF72;
   --font-selection-color: black;
   --post-meta-color: #454545;
+  --post-link-focus-color: #47FF9D;
+  --page-link-focus-color: #47FF9D;
+  --post-link-selection: #98BBEC;
+  --outline-color: #201f1e;
+  --code-selection-color: #EEE5E9;
 }
 
 [data-theme="dark"] {
@@ -106,13 +111,17 @@ header .wrapper {
 }
 
 .page-link:focus{
-  background-color: #00d463;
+  background-color: var(--page-link-focus-color);
   color: black;
 }
 
 .page-link.active, .page-link.active:hover {
   color: var(--headings-color);
   border-bottom: 3px solid var(--menu-link-border);
+}
+
+.page-link.active:focus {
+    border-color: var(--page-link-focus-color);
 }
 
 .logo {
@@ -139,17 +148,17 @@ header .wrapper {
 
 .post-link, .post-link:visited {
   font-size: 23.99px; /* ta bugando o em :( */
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--post-link-color);
   background-color: var(--post-link-decoration);
 }
 
 .post-link::selection {
-  background-color: #266dd3;
+  background-color: var(--post-link-selection);
 }
 
 .post-link:focus {
-  background-color: #00d463;
+  background-color: var(--post-link-focus-color);
   color: black;
 }
 
@@ -190,9 +199,10 @@ a, a:visited {
 }
 
 a:focus {
-  background-color: #eee5e9;
+  background-color: var(--page-link-focus-color);
   color: black;
   text-decoration: none;
+  outline: 1px solid var(--outline-color);
 }
 
 .people-list {
@@ -314,6 +324,11 @@ footer {
 
 code {
   font-family: 'Jetbrains Mono', monospace;
+}
+
+p > code {
+
+    background-color: var(--code-selection-color);
 }
 
 pre.highlight {
@@ -487,7 +502,7 @@ pre.highlight {
   .menu-container {
     width: 100%;
     background-color: white;
-    border: 2px #454545 solid;
+    border: 2px var(--outline-color) solid;
   }
 
   .hamburguer-btn {
