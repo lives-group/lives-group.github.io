@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Creating DSLs with Racket - Part I'
-date: 2020-08-18 15:00:00 -0300
+date: 2020-11-06 15:00:00 -0300
 permalink: /blog/creating-dsls-with-racket-part-I
 author: Rodrigo Ribeiro
 categories:
